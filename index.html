@@ -6,7 +6,7 @@
     <title>MY WebPage</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images.html/s.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
@@ -200,26 +200,29 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js">
-    </script>
-    <script>
-        debugger;
-        $('portfolio-item').isotope({
-
-            itemSelector: '.item',
-            layoutMode: 'fitRows'
-        });
-        $('portfolio-menu ul li').click(function () {
-            $('portfolio-menu ul li').removeclick("active");
-            $(this).addClass("active");
-
-            var selector = $(this).attr('data-filter');
-            $('portfolio-item').isotope({
-                filter: selector
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                debugger;
+                $('.portfolio-item').isotope({
+                    itemSelector: '.item',
+                    layoutMode: 'fitRows'
+                });
+        
+                $('.portfolio-menu ul li').click(function() {
+                    $('.portfolio-menu ul li').removeClass("active");
+                    $(this).addClass("active");
+        
+                    var selector = $(this).attr('data-filter');
+                    $('.portfolio-item').isotope({
+                        filter: selector
+                    });
+                    return false;
+                });
             });
-            return false;
-        });
-    </script>
+        </script>
+        
 </body>
 
 </html>
