@@ -198,31 +198,29 @@
         </div>
 
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                debugger;
-                $('.portfolio-item').isotope({
-                    itemSelector: '.item',
-                    layoutMode: 'fitRows'
-                });
-        
-                $('.portfolio-menu ul li').click(function() {
-                    $('.portfolio-menu ul li').removeClass("active");
-                    $(this).addClass("active");
-        
-                    var selector = $(this).attr('data-filter');
-                    $('.portfolio-item').isotope({
-                        filter: selector
-                    });
-                    return false;
-                });
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            debugger;
+            $('.portfolio-item').isotope({
+                itemSelector: '.item',
+                layoutMode: 'fitRows'
             });
-        </script>
-        
+    
+            $('.portfolio-menu ul li').click(function() {
+                $('.portfolio-menu ul li').removeClass("active");
+                $(this).addClass("active");
+    
+                var selector = $(this).attr('data-filter');
+                $('.portfolio-item').isotope({
+                    filter: selector
+                });
+                return false;
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
