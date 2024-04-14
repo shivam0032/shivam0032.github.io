@@ -337,6 +337,47 @@ footer {
 /* contact */
 
 
+.body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+.contact-info,
+.form-container {
+    width: 48%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.contact-info h2,
+.form-container h2 {
+    margin-bottom: 10px;
+}
+.contact-info a,
+.form-container input,
+.form-container textarea,
+.form-container button {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.contact-info a {
+    margin-bottom: 10px;
+}
+.form-container input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
 /*  */
 .about1 {
     width: 80%;
